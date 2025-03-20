@@ -215,6 +215,9 @@ There are several datasets that are prescribed for you to use in this part. Belo
     Discuss your accessibility metric and how you arrived at it below:
 
     **Description:**
+    
+    The accessibility metric is defined as the percentage of PWD parcels
+  in the neighborhood which has an accessible bus stop within 200 meters.
 
 6.  What are the _top five_ neighborhoods according to your accessibility metric?
 
@@ -240,6 +243,16 @@ There are several datasets that are prescribed for you to use in this part. Belo
     ```
 
     **Discussion:**
+    
+    1. Take the Philadelphia Universities and Colleges
+dataset from opendataphilly
+(https://opendataphilly.org/datasets/philadelphia-universities-and-colleges/)
+and filter to parcels from University of Pennsylvania
+	2. Take the Zoning Base Districts dataset from opendataphilly
+(https://opendataphilly.org/datasets/zoning-base-districts/)
+and filter to zoning group 'Special Purpose'
+	3. Take the intersection of 1. and 2.
+	4. Take the concave hull of the union of 3, deleting holes
 
 9. With a query involving PWD parcels and census block groups, find the `geo_id` of the block group that contains Meyerson Hall. `ST_MakePoint()` and functions like that are not allowed.
 
